@@ -1,0 +1,40 @@
+{
+  "name": "nextflare",
+  "version": "0.0.1",
+  "description": "",
+  "bin": {
+    "nextflare": "./dist/cli.js"
+  },
+  "scripts": {
+    "lint": "pnpm eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pnpm exec esbuild ./src/index.ts --bundle --platform=node --outfile=./dist/cli.js --external:./node_modules/* --loader:.template.ts=text",
+    "dev": "pnpm build --watch --sourcemap"
+  },
+  "type": "commonjs",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "@types/fs-extra": "^9.0.13",
+    "@vercel/next": "^3.1.20",
+    "chalk": "^5.0.1",
+    "esbuild": "^0.15.5",
+    "fs-extra": "^10.1.0",
+    "minimist": "^1.2.6",
+    "source-map": "^0.7.4",
+    "vercel": "^28.1.3",
+    "webpack": "^5.74.0",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.7.13",
+    "@types/yargs": "^17.0.11",
+    "tsx": "^3.8.2"
+  }
+}

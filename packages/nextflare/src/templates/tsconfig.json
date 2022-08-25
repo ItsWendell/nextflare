@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Cloudflare Workers",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["webworker", "esnext"],
+    "jsx": "react",
+    "reactNamespace": "React",
+    "jsxImportSource": "react-jsx",
+    "alwaysStrict": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "types": [
+      "node",
+      "@cloudflare/workers-types"
+    ]
+  }
+}
