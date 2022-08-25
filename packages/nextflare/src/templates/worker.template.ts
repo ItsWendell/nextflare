@@ -9,7 +9,11 @@ export default {
       __MIDDLEWARE_MANIFEST__.functions
     )) {
       if (new RegExp(func.regexp).test(url.pathname)) {
-        console.debug("[Next.js Worker] Found regex match for", url.pathname, func);
+        console.debug(
+          "[Next.js Worker] Found regex match for",
+          url.pathname,
+          func
+        );
         const entry = _ENTRIES[`middleware_${func.name}`];
         const { waitUntil, response } = await entry.default({
           request: request,

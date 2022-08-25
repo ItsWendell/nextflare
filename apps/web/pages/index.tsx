@@ -33,6 +33,6 @@ export const getStaticProps: GetStaticProps = async () => {
       isStatic: true,
     },
   };
-}
+};
 
 export default HomePage;

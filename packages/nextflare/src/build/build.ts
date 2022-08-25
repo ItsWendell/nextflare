@@ -10,9 +10,7 @@ export interface VercelBuildPagesOptions {
   nextFolder?: string;
 }
 
-export const build = async (
-  options: VercelBuildPagesOptions = {}
-) => {
+export const build = async (options: VercelBuildPagesOptions = {}) => {
   if (!options.nextFolder) {
     options.nextFolder = "./.next";
   }
@@ -45,7 +43,7 @@ export const build = async (
   } else {
     fs.emptyDirSync(path.join(process.cwd(), options?.distFolder));
   }
-  
+
   await buildNextWorker(options);
 
   await generateStaticFiles(options);

@@ -12,30 +12,27 @@ const HomePage: NextPage<PageProps> = (props) => {
   return (
     <div>
       <h1>This is a Next.js SSR Page!</h1>
+      <div>{JSON.stringify(props)}</div>
       <div>
-        {JSON.stringify(props)}
+        <Link href="/" passHref>
+          <a>Go to Static page!</a>
+        </Link>
       </div>
       <div>
-      <Link href="/" passHref>
-        <a>Go to Static page!</a>
-      </Link>
-      </div>
-      <div>
-      <Link href="/api/info" passHref>
-        <a>Visit API endpoint</a>
-      </Link>
+        <Link href="/api/info" passHref>
+          <a>Visit API endpoint</a>
+        </Link>
       </div>
       <button onClick={() => window.location.reload()}>Reload</button>
-
     </div>
   );
-}
+};
 
 export default HomePage;
 
 export const config = {
   runtime: "experimental-edge",
-}
+};
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
   return {
@@ -43,6 +40,6 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
       isServer: true,
       runtime: "edge",
       generatedAt: Date.now(),
-    }
-  }
-}
+    },
+  };
+};

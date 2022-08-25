@@ -1,8 +1,8 @@
-import { NextRequest, userAgent } from 'next/server'
+import { NextRequest, userAgent } from "next/server";
 
 export const config = {
-  runtime: 'experimental-edge',
-}
+  runtime: "experimental-edge",
+};
 
 export default async function handler(req: NextRequest) {
   return new Response(
@@ -15,8 +15,8 @@ export default async function handler(req: NextRequest) {
     {
       status: 200,
       headers: {
-        'content-type': 'application/json',
+        "content-type": "application/json",
       },
     }
-  )
+  );
 }

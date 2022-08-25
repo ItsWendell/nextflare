@@ -5,14 +5,19 @@ import { hideBin } from "yargs/helpers";
 import { build } from "./build/build";
 
 yargs(hideBin(process.argv))
-  .command(['build', '$0'], '', () => {}, async (argv) => {
-    console.log(chalk.green("Starting build for Cloudflare Pages..."));
-    await build();
-  })
+  .command(
+    ["build", "$0"],
+    "",
+    () => {},
+    async (argv) => {
+      console.log(chalk.green("Starting build for Cloudflare Pages..."));
+      await build();
+    }
+  )
   .options({
-    dist: { type: 'string', default: './dist' },
-    vercelFolder: { type: 'string', default: './vercel' },
-    nextFolder: { type: 'string', default: './next' },
+    dist: { type: "string", default: "./dist" },
+    vercelFolder: { type: "string", default: "./vercel" },
+    nextFolder: { type: "string", default: "./next" },
   })
   .demandCommand(1)
-  .parse()
+  .parse();
