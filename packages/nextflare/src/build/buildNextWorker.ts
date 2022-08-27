@@ -24,7 +24,9 @@ export const buildNextWorker = async (options?: VercelBuildPagesOptions) => {
   // Replace the requires in the template with the generated requires
   const workersFile = workersTemplate as string;
 
-  const requires = Object.entries(middlewareManifest.functions).reduce(
+  const entries = [...Object.entries(middlewareManifest.middleware) ?? [], ...Object.entries(middlewareManifest.functions) ?? []];
+
+  const requires = entries.reduce(
     (acc, [name, func]: [string, any]) => {
       for (const file of func.files) {
         acc.add(file);
@@ -35,10 +37,14 @@ export const buildNextWorker = async (options?: VercelBuildPagesOptions) => {
   );
 
   // Build the worker with esbuild
+
+  const workerPath = path.join(process.cwd(), options?.distFolder, "_worker.js");
   const result = await build({
-    outfile: path.join(process.cwd(), options?.distFolder, "_worker.js"),
+    outfile: workerPath,
     stdin: {
       contents: `
+          globalThis.process = globalThis.process || { env: {} };
+          globalThis.process.env.NODE_ENV = "production";
           ${Array.from(requires)
             .map((file) => `import "./${file}";`)
             .join("\n")}
@@ -50,11 +56,12 @@ export const buildNextWorker = async (options?: VercelBuildPagesOptions) => {
     define: {
       __MIDDLEWARE_MANIFEST__: JSON.stringify(middlewareManifest),
       _ENTRIES: JSON.stringify({}),
-      // TODO: Define all env variables from the manifest
-      "process.env.NODE_ENV": JSON.stringify("production"),
+      global: "globalThis",
+      process: "globalThis.process",
+      self: "globalThis",
     },
     minify: false,
-    target: "esnext",
+    target: "es2020",
     bundle: true,
     format: "esm",
     sourcemap: false,
@@ -62,7 +69,6 @@ export const buildNextWorker = async (options?: VercelBuildPagesOptions) => {
     conditions: ["worker", "browser"],
     absWorkingDir: path.join(process.cwd(), options.nextFolder),
     legalComments: "none",
-    platform: "neutral",
   });
 
   if (result.errors.length) {
@@ -73,4 +79,7 @@ export const buildNextWorker = async (options?: VercelBuildPagesOptions) => {
   if (result.warnings.length) {
     console.warn(result.warnings);
   }
+
+  const contents = await fs.readFile(workerPath, "utf8");
+  await fs.writeFile(workerPath, contents.replace("configurable: false", "configurable: true"));
 };

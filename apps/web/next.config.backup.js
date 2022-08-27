@@ -10,6 +10,9 @@ const baseConfig = {
   experimental: {
     runtime: "experimental-edge",
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack: (config, context) => {
     if (context.isServer) {
       config.optimization.splitChunks.minSize = 0;

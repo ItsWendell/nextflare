@@ -4,6 +4,8 @@ import * as path from "path";
 import { getRealNextjsVersion } from "../utils";
 import { buildNextWorker } from "./buildNextWorker";
 import { generateStaticFiles } from "./generateStaticFiles";
+import tsconfig from "../templates/tsconfig.json";
+import { generateRoutesFile } from "./generateRoutesFile";
 
 export interface VercelBuildPagesOptions {
   distFolder?: string;
@@ -47,6 +49,15 @@ export const build = async (options: VercelBuildPagesOptions = {}) => {
   await buildNextWorker(options);
 
   await generateStaticFiles(options);
+
+  await generateRoutesFile(options);
+
+  // Copy tsconfig.json to dist folder
+  await fs.createFile(path.join(process.cwd(), options?.distFolder, "tsconfig.json"));
+  fs.writeJSON(
+    path.join(process.cwd(), options?.distFolder, "tsconfig.json"),
+    tsconfig,
+  );
 
   console.log("Build complete");
 };

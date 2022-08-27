@@ -1,4 +1,4 @@
-import { NextRequest, userAgent } from "next/server";
+import { NextRequest, userAgentFromString } from "next/server";
 
 export const config = {
   runtime: "experimental-edge",
@@ -9,7 +9,8 @@ export default async function handler(req: NextRequest) {
     JSON.stringify({
       geo: req.geo,
       ip: req.ip,
-      userAgent: userAgent(req),
+      headers: Object.fromEntries(req.headers?.entries()),
+      userAgent: userAgentFromString(req.headers?.get('user-agent') ?? ""),
       cf: (req as any).cf ?? null,
     }),
     {

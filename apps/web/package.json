@@ -4,34 +4,35 @@
   "private": true,
   "scripts": {
     "vercel-build": "next build --debug",
-    "build": "pnpm run build:next && pnpm run build:pages",
+    "build": "pnpm run next:build && pnpm run pages:build",
     "dev": "next dev",
-    "build:next": "next build",
-    "build:pages": "nextflare build",
+    "next:build": "next build",
     "dev:pages": "(cd .pages && pnpm wrangler pages dev . --port 9003)",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pages:build": "nextflare build",
+    "pages:deploy": "pnpm wrangler pages publish ./dist --project-name=nextflare-demo",
+    "pages:dev": "pnpm wrangler pages dev ./dist"
   },
   "dependencies": {
     "@cfpreview/vercel-to-pages": "^0.0.1",
     "next": "canary",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "ui": "workspace:*",
-    "wrangler": "2.0.26"
+    "ui": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@types/node": "^18.7.6",
     "@types/react": "18.0.17",
-    "nextflare": "workspace:*",
-    "cf-pages-vercel-build": "workspace:*",
     "eslint": "8.22.0",
     "eslint-config-custom": "workspace:*",
     "next-transpile-modules": "9.0.0",
+    "nextflare": "workspace:*",
     "ts-loader": "^9.3.1",
     "tsconfig": "workspace:*",
     "typescript": "^4.7.4",
     "vercel": "^28.1.0",
-    "webpack-deduplication-plugin": "^0.0.8"
+    "webpack-deduplication-plugin": "^0.0.8",
+    "wrangler": "0.0.0-13798979"
   }
 }
