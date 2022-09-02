@@ -72,4 +72,14 @@ export const generateStaticFiles = async (options: VercelBuildPagesOptions) => {
 
   const buildId = await getBuildId(options);
   await copyStaticBuildFiles(options, buildId);
+
+  // Copy public folder to dist folder
+  await fs.copy(
+    path.join(process.cwd(), "public"),
+    path.join(process.cwd(), options?.distFolder),
+    {
+      overwrite: false,
+      errorOnExist: true, 
+    },
+  );
 };

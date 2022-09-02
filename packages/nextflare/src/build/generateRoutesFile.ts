@@ -11,8 +11,8 @@ export interface RoutesFile {
 export const generateRoutesFile = async (options: VercelBuildPagesOptions) => {
     const routes: RoutesFile = {
         version: 1,
-        include: [],
-        exclude: ["_next/*", "*.html"],
+        include: ["/*"],
+        exclude: ["/_next/static/*", "/*.html"],
     };
 
     fs.writeJSONSync(path.join(process.cwd(), options?.distFolder, "_routes.json"), routes);

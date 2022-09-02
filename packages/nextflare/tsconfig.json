@@ -5,11 +5,13 @@
     "module": "ESNext",
     "outDir": "./dist",
     "esModuleInterop": true,
+    "target": "ESNext",
     "allowJs": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "Node",
   },
+  
   "ts-node": {
       "esm": true,
   }

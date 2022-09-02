@@ -4,12 +4,17 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "./dist",
-    "module": "esnext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "target": "esnext",
-    "lib": ["webworker", "esnext"],
+    "lib": ["WebWorker", "ESNext"],
     "alwaysStrict": true,
     "preserveConstEnums": true,
     "sourceMap": true,
+    "paths": {
+      "@vercel/next": ["../node_modules/@vercel/next"],
+      "next": ["../node_modules/next"]
+    },
     "types": [
       "node",
       "@cloudflare/workers-types"

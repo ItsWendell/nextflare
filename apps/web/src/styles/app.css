@@ -1,0 +1,128 @@
+/* card */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  3% {
+    opacity: 0.7;
+    transform: scale(1.03);
+  }
+  3.6% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  4.2% {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  95% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.card {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow: visible;
+}
+
+.card .orbit {
+  fill: none;
+  stroke-width: 1.165;
+  animation: grow 5s linear both infinite;
+}
+
+.card .orbits > g {
+  animation: spin 60s linear both infinite;
+}
+
+.card .orbits > g:nth-child(2) {
+  animation-duration: 80s;
+}
+
+.card .orbits > g:nth-child(3) {
+  animation-duration: 100s;
+}
+
+.card .orbits > g:nth-child(4) {
+  animation-duration: 120s;
+}
+
+.card stop {
+  stop-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 800px) {
+  .card .orbits > g:nth-child(2) {
+    animation-duration: 120s;
+  }
+
+  .card .orbits > g:nth-child(3) {
+    animation-duration: 150s;
+  }
+
+  .card .orbits > g:nth-child(4) {
+    animation-duration: 180s;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card stop {
+    stop-color: white;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .card .satellite,
+  .card .orbit,
+  .card .orbits > g {
+    animation: none;
+  }
+}
+
+.cls-1{fill:#f4801f;}.cls-2{fill:#f9ab41;}
+
+.cf-a {
+  fill: #fff;
+}
+
+.cf-b {
+  fill: #f48120;
+}
+
+.cf-c {
+  fill: #faad3f;
+}
+
+.cf-d {
+  fill: #404041;
+}
