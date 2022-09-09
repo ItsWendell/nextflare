@@ -1,6 +1,12 @@
 const withTM = require("next-transpile-modules")(["ui"]);
 const path = require("path");
 const fs = require("fs");
+const NextflareWebpackPlugin = require("nextflare/dist/webpack").default;
+
+console.log("NextflareWebpackPlugin", NextflareWebpackPlugin)
+
+// Fix serialisation of BigInts
+BigInt.prototype.toJSON = function() { return this.toString() }
 
 const version = require("next/package.json").version;
 
@@ -15,7 +21,7 @@ const baseConfig = {
     NEXT_PUBLIC_NEXT_VERSION: version,
   },
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
   experimental: {
     runtime: "experimental-edge",
@@ -30,12 +36,15 @@ const baseConfig = {
     ]
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   webpack: (config, context) => {
     if (context.isServer && context.nextRuntime === "edge" && !context.dev) {
       config.optimization.splitChunks.minSize = 0;
       config.optimization.splitChunks.minChunks = 1;
+      config.plugins.push(new NextflareWebpackPlugin());
+      //console.log("[next.config.js] Edge context", JSON.stringify(context, null, 2));
+      // console.log("[next.config.js] Edge config", JSON.stringify(config, null, 2));
     }
     
     return config;

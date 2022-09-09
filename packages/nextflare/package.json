@@ -5,12 +5,16 @@
   "bin": {
     "nextflare": "./dist/cli.js"
   },
+  "files": [
+    "./dist/cli.js",
+    "./dist/webpack.js"
+  ],
   "scripts": {
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm lint --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pnpm exec esbuild ./src/index.ts --bundle --platform=node --outfile=./dist/cli.js --external:./node_modules/* --loader:.template.ts=text",
-    "dev": "pnpm build --watch --sourcemap"
+    "build": "node -r @swc-node/register ./build.ts",
+    "dev": "pnpm build dev"
   },
   "type": "commonjs",
   "keywords": [],
@@ -33,6 +37,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.14.1",
+    "@swc-node/register": "^1.5.1",
     "@types/minimist": "^1.2.2",
     "@types/node": "^18.7.13",
     "@types/yargs": "^17.0.11",

@@ -16,9 +16,9 @@
   "dependencies": {
     "@cfpreview/vercel-to-pages": "^0.0.1",
     "@vercel/next": "^3.1.22",
-    "next": "canary",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "file:../../../next.js/packages/next",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "ui": "workspace:*"
   },
   "devDependencies": {
@@ -37,6 +37,7 @@
     "tsconfig": "workspace:*",
     "typescript": "^4.7.4",
     "vercel": "^28.1.0",
+    "webpack": "5",
     "webpack-deduplication-plugin": "^0.0.8",
     "wrangler": "0.0.0-13798979"
   }

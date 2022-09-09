@@ -51,6 +51,11 @@ export const buildNextWorker = async (options?: VercelBuildPagesOptions) => {
     options?.distFolder,
     "_worker.js"
   );
+
+  const env = {
+    NEXT_RUNTIME: 'edge',
+    NEXT_CLOUDFLARE: '1',
+  }
   const result = await build({
     outfile: workerPath,
     stdin: {

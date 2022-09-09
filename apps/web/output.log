@@ -1,0 +1,365 @@
+
+> web@0.0.0 next:build /home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web
+> next build
+
+Hello from Nextflare
+NextflareWebpackPlugin [class NextflareWebpackPlugin]
+info  - Skipping validation of types
+info  - Skipping linting
+info  - Creating an optimized production build...
+{
+  'src/middleware': 'next-middleware-loader?absolutePagePath=private-next-root-dir%2Fsrc%2Fmiddleware.ts&page=%2Fsrc%2Fmiddleware&matchers=W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLyhcXC8%2FaW5kZXh8XFwvP2luZGV4XFwuanNvbikpP1tcXC8jXFw%2FXT8kIn0seyJyZWdleHAiOiJeKD86XFwvKF9uZXh0XFwvZGF0YVxcL1teL117MSx9KSk%2FXFwvcmVkaXJlY3QoLmpzb24pP1tcXC8jXFw%2FXT8kIn1d!'
+}
+{
+  'src/middleware': 'next-middleware-loader?absolutePagePath=private-next-root-dir%2Fsrc%2Fmiddleware.ts&page=%2Fsrc%2Fmiddleware&matchers=W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLyhcXC8%2FaW5kZXh8XFwvP2luZGV4XFwuanNvbikpP1tcXC8jXFw%2FXT8kIn0seyJyZWdleHAiOiJeKD86XFwvKF9uZXh0XFwvZGF0YVxcL1teL117MSx9KSk%2FXFwvcmVkaXJlY3QoLmpzb24pP1tcXC8jXFw%2FXT8kIn1d!',
+  'pages/api/info': 'next-edge-function-loader?absolutePagePath=private-next-pages%2Fapi%2Finfo.ts&page=%2Fapi%2Finfo!'
+}
+{
+  'src/middleware': 'next-middleware-loader?absolutePagePath=private-next-root-dir%2Fsrc%2Fmiddleware.ts&page=%2Fsrc%2Fmiddleware&matchers=W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLyhcXC8%2FaW5kZXh8XFwvP2luZGV4XFwuanNvbikpP1tcXC8jXFw%2FXT8kIn0seyJyZWdleHAiOiJeKD86XFwvKF9uZXh0XFwvZGF0YVxcL1teL117MSx9KSk%2FXFwvcmVkaXJlY3QoLmpzb24pP1tcXC8jXFw%2FXT8kIn1d!',
+  'pages/api/info': 'next-edge-function-loader?absolutePagePath=private-next-pages%2Fapi%2Finfo.ts&page=%2Fapi%2Finfo!',
+  'pages/catch-all/[[...path]]': {
+    import: "next-edge-ssr-loader?absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Fcatch-all%2F%5B%5B...path%5D%5D.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2Fcatch-all%2F%5B%5B...path%5D%5D&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=!",
+    layer: undefined
+  }
+}
+{
+  'src/middleware': 'next-middleware-loader?absolutePagePath=private-next-root-dir%2Fsrc%2Fmiddleware.ts&page=%2Fsrc%2Fmiddleware&matchers=W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLyhcXC8%2FaW5kZXh8XFwvP2luZGV4XFwuanNvbikpP1tcXC8jXFw%2FXT8kIn0seyJyZWdleHAiOiJeKD86XFwvKF9uZXh0XFwvZGF0YVxcL1teL117MSx9KSk%2FXFwvcmVkaXJlY3QoLmpzb24pP1tcXC8jXFw%2FXT8kIn1d!',
+  'pages/api/info': 'next-edge-function-loader?absolutePagePath=private-next-pages%2Fapi%2Finfo.ts&page=%2Fapi%2Finfo!',
+  'pages/catch-all/[[...path]]': {
+    import: "next-edge-ssr-loader?absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Fcatch-all%2F%5B%5B...path%5D%5D.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2Fcatch-all%2F%5B%5B...path%5D%5D&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=!",
+    layer: undefined
+  },
+  'pages/dynamic/[slug]': {
+    import: "next-edge-ssr-loader?absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Fdynamic%2F%5Bslug%5D.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2Fdynamic%2F%5Bslug%5D&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=!",
+    layer: undefined
+  }
+}
+{
+  'src/middleware': 'next-middleware-loader?absolutePagePath=private-next-root-dir%2Fsrc%2Fmiddleware.ts&page=%2Fsrc%2Fmiddleware&matchers=W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLyhcXC8%2FaW5kZXh8XFwvP2luZGV4XFwuanNvbikpP1tcXC8jXFw%2FXT8kIn0seyJyZWdleHAiOiJeKD86XFwvKF9uZXh0XFwvZGF0YVxcL1teL117MSx9KSk%2FXFwvcmVkaXJlY3QoLmpzb24pP1tcXC8jXFw%2FXT8kIn1d!',
+  'pages/api/info': 'next-edge-function-loader?absolutePagePath=private-next-pages%2Fapi%2Finfo.ts&page=%2Fapi%2Finfo!',
+  'pages/catch-all/[[...path]]': {
+    import: "next-edge-ssr-loader?absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Fcatch-all%2F%5B%5B...path%5D%5D.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2Fcatch-all%2F%5B%5B...path%5D%5D&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=!",
+    layer: undefined
+  },
+  'pages/dynamic/[slug]': {
+    import: "next-edge-ssr-loader?absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Fdynamic%2F%5Bslug%5D.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2Fdynamic%2F%5Bslug%5D&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=!",
+    layer: undefined
+  },
+  'pages/index': {
+    import: "next-edge-ssr-loader?absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Findex.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2F&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=!",
+    layer: undefined
+  }
+}
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js',
+    options: 'absolutePagePath=private-next-root-dir%2Fsrc%2Fmiddleware.ts&page=%2Fsrc%2Fmiddleware&matchers=W3sicmVnZXhwIjoiXig%2FOlxcLyhfbmV4dFxcL2RhdGFcXC9bXi9dezEsfSkpPyg%2FOlxcLyhcXC8%2FaW5kZXh8XFwvP2luZGV4XFwuanNvbikpP1tcXC8jXFw%2FXT8kIn0seyJyZWdleHAiOiJeKD86XFwvKF9uZXh0XFwvZGF0YVxcL1teL117MSx9KSk%2FXFwvcmVkaXJlY3QoLmpzb24pP1tcXC8jXFw%2FXT8kIn1d',
+    ident: undefined
+  }
+]
+loaderName next-middleware-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-edge-function-loader.js',
+    options: 'absolutePagePath=private-next-pages%2Fapi%2Finfo.ts&page=%2Fapi%2Finfo',
+    ident: undefined
+  }
+]
+loaderName next-edge-function-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-edge-ssr-loader/index.js',
+    options: "absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Fcatch-all%2F%5B%5B...path%5D%5D.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2Fcatch-all%2F%5B%5B...path%5D%5D&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=",
+    ident: undefined
+  }
+]
+loaderName next-edge-ssr-loader
+Replacing next-edge-ssr-loader with nextflare-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-edge-ssr-loader/index.js',
+    options: "absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Fdynamic%2F%5Bslug%5D.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2Fdynamic%2F%5Bslug%5D&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=",
+    ident: undefined
+  }
+]
+loaderName next-edge-ssr-loader
+Replacing next-edge-ssr-loader with nextflare-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-edge-ssr-loader/index.js',
+    options: "absolute500Path=&absoluteAppPath=private-next-pages%2F_app.tsx&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=next%2Fdist%2Fpages%2F_error&absolutePagePath=private-next-pages%2Findex.tsx&buildId=0BKdZhZbfJoyXg8u156vP&dev=false&isServerComponent=false&page=%2F&stringifiedConfig=%7B%22env%22%3A%7B%7D%2C%22webpackDevMiddleware%22%3Anull%2C%22eslint%22%3A%7B%22ignoreDuringBuilds%22%3Atrue%7D%2C%22typescript%22%3A%7B%22ignoreBuildErrors%22%3Atrue%2C%22tsconfigPath%22%3A%22tsconfig.json%22%7D%2C%22distDir%22%3A%22.next%22%2C%22cleanDistDir%22%3Atrue%2C%22assetPrefix%22%3A%22%22%2C%22configOrigin%22%3A%22next.config.js%22%2C%22useFileSystemPublicRoutes%22%3Atrue%2C%22generateEtags%22%3Atrue%2C%22pageExtensions%22%3A%5B%22tsx%22%2C%22ts%22%2C%22jsx%22%2C%22js%22%5D%2C%22target%22%3A%22server%22%2C%22poweredByHeader%22%3Afalse%2C%22compress%22%3Atrue%2C%22analyticsId%22%3A%22%22%2C%22images%22%3A%7B%22deviceSizes%22%3A%5B640%2C750%2C828%2C1080%2C1200%2C1920%2C2048%2C3840%5D%2C%22imageSizes%22%3A%5B16%2C32%2C48%2C64%2C96%2C128%2C256%2C384%5D%2C%22path%22%3A%22%2F_next%2Fimage%22%2C%22loader%22%3A%22default%22%2C%22domains%22%3A%5B%5D%2C%22disableStaticImages%22%3Afalse%2C%22minimumCacheTTL%22%3A60%2C%22formats%22%3A%5B%22image%2Fwebp%22%5D%2C%22dangerouslyAllowSVG%22%3Afalse%2C%22contentSecurityPolicy%22%3A%22script-src%20'none'%3B%20frame-src%20'none'%3B%20sandbox%3B%22%2C%22remotePatterns%22%3A%5B%5D%2C%22unoptimized%22%3Afalse%7D%2C%22devIndicators%22%3A%7B%22buildActivity%22%3Atrue%2C%22buildActivityPosition%22%3A%22bottom-right%22%7D%2C%22onDemandEntries%22%3A%7B%22maxInactiveAge%22%3A15000%2C%22pagesBufferLength%22%3A2%7D%2C%22amp%22%3A%7B%22canonicalBase%22%3A%22%22%7D%2C%22basePath%22%3A%22%22%2C%22sassOptions%22%3A%7B%7D%2C%22trailingSlash%22%3Afalse%2C%22i18n%22%3Anull%2C%22productionBrowserSourceMaps%22%3Afalse%2C%22optimizeFonts%22%3Atrue%2C%22excludeDefaultMomentLocales%22%3Atrue%2C%22serverRuntimeConfig%22%3A%7B%7D%2C%22publicRuntimeConfig%22%3A%7B%7D%2C%22reactStrictMode%22%3Atrue%2C%22httpAgentOptions%22%3A%7B%22keepAlive%22%3Atrue%7D%2C%22outputFileTracing%22%3Atrue%2C%22staticPageGenerationTimeout%22%3A60%2C%22swcMinify%22%3Afalse%2C%22experimental%22%3A%7B%22optimisticClientCache%22%3Atrue%2C%22runtime%22%3A%22experimental-edge%22%2C%22manualClientBasePath%22%3Afalse%2C%22legacyBrowsers%22%3Atrue%2C%22browsersListForSwc%22%3Afalse%2C%22newNextLinkBehavior%22%3Afalse%2C%22cpus%22%3A7%2C%22sharedPool%22%3Atrue%2C%22profiling%22%3Afalse%2C%22isrFlushToDisk%22%3Atrue%2C%22workerThreads%22%3Afalse%2C%22pageEnv%22%3Afalse%2C%22optimizeCss%22%3Afalse%2C%22nextScriptWorkers%22%3Afalse%2C%22scrollRestoration%22%3Afalse%2C%22externalDir%22%3Afalse%2C%22disableOptimizedLoading%22%3Afalse%2C%22gzipSize%22%3Atrue%2C%22swcFileReading%22%3Atrue%2C%22craCompat%22%3Afalse%2C%22esmExternals%22%3Atrue%2C%22appDir%22%3Afalse%2C%22isrMemoryCacheSize%22%3A52428800%2C%22serverComponents%22%3Afalse%2C%22fullySpecified%22%3Afalse%2C%22outputFileTracingRoot%22%3A%22%22%2C%22swcTraceProfiling%22%3Afalse%2C%22forceSwcTransforms%22%3Afalse%2C%22largePageDataBytes%22%3A128000%7D%2C%22configFile%22%3A%22%2Fhome%2Fwmisiedjan%2FProjects%2Fitswendell%2Fbuild-api-workers%2Fapps%2Fweb%2Fnext.config.js%22%2C%22configFileName%22%3A%22next.config.js%22%7D&pagesType=pages&appDirLoader=",
+    ident: undefined
+  }
+]
+loaderName next-edge-ssr-loader
+Replacing next-edge-ssr-loader with nextflare-loader
+Loaders []
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders []
+Loaders []
+Loaders []
+Loaders []
+Loaders []
+Loaders []
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders []
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders []
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders [
+  {
+    loader: '/home/wmisiedjan/Projects/itswendell/build-api-workers/node_modules/.pnpm/file+..+next.js+packages+next_vyk55zyolcaieh7zfm7nf7uva4/node_modules/next/dist/build/webpack/loaders/next-swc-loader.js',
+    options: {
+      isServer: true,
+      pagesDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/src/pages',
+      hasReactRefresh: false,
+      fileReading: true,
+      nextConfig: [Object],
+      jsConfig: [Object],
+      supportedBrowsers: undefined,
+      swcCacheDir: '/home/wmisiedjan/Projects/itswendell/build-api-workers/apps/web/.next/cache/swc'
+    },
+    ident: 'ruleSet[1].rules[5].oneOf[1].use'
+  }
+]
+loaderName next-swc-loader
+Loaders []
+Loaders []
+Loaders []
+info  - Compiled successfully
+info  - Collecting page data...
+ ELIFECYCLE  Command failed with exit code 1.
