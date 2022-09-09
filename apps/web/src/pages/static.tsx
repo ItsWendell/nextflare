@@ -4,7 +4,7 @@ import React from "react";
 export const StaticPage = (props: any) => {
     return (
         <div className="container px-4 self-center w-full mt-4">
-        <div className="prose max-w-none">
+        <div className="prose dark:prose-invert max-w-none">
           <h1>Static Pages</h1>
           {/** Subtitle */}
             <p className="text-gray-600">This page is static and uploaded as .html to Cloudflare Pages.</p>

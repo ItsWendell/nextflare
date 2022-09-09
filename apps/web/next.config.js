@@ -2,10 +2,18 @@ const withTM = require("next-transpile-modules")(["ui"]);
 const path = require("path");
 const fs = require("fs");
 
+const version = require("next/package.json").version;
+
+console.log("version", version);
+
 /** @type {import('next').NextConfig} */
 const baseConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  env: {
+    // Expose Next.js version in the browser.
+    NEXT_PUBLIC_NEXT_VERSION: version,
+  },
   typescript: {
     ignoreBuildErrors: false,
   },
@@ -29,6 +37,7 @@ const baseConfig = {
       config.optimization.splitChunks.minSize = 0;
       config.optimization.splitChunks.minChunks = 1;
     }
+    
     return config;
   }
 }

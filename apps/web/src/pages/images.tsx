@@ -6,7 +6,7 @@ import DemoImage from "~/public/image.jpg";
 export const ImagePage = (props: any) => {
   return (
     <div className="container px-4  self-center w-full mt-4">
-      <div className="prose max-w-none">
+      <div className="prose dark:prose-invert max-w-none">
         <h1>Images</h1>
         <figure>
           <Image alt="demo-image" src={DemoImage} />

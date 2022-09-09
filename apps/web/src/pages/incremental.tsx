@@ -4,7 +4,7 @@ import React from "react";
 export const StaticPage = (props: any) => {
     return (
         <div className="container px-4 self-center w-full mt-4">
-        <div className="prose max-w-none">
+        <div className="prose dark:prose-invert max-w-none">
           <h1>Incremental Static Generation</h1>
           {/** Subtitle */}
             <p className="text-gray-600">Incremental static generation is not supported yet but might be possible in the future by using a custom KV store.</p>

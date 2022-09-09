@@ -6,7 +6,7 @@ export const DynamicPage = (props: any) => {
   const router = useRouter();
   return (
     <div className="container px-4 self-center w-full mt-4">
-      <div className="prose max-w-none">
+      <div className="prose dark:prose-invert max-w-none">
         <h1>Dynamic Routes</h1>
         <p>
           This is a dynamic route, with <code>[slug].tsx</code> as file name,

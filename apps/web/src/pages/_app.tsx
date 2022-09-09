@@ -10,10 +10,8 @@ export default function MyApp({ Component, pageProps }: AppProps<any>) {
   console.log("pageProps", pageProps);
   return (
     <div className="app bg-white dark:bg-black min-h-screen w-full flex flex-col">
-      <Card isHome={pageProps?.isHome ?? false} />
-
       <HeaderResponsive />
-      <div className="flex flex-col flex-1 mb-2 md:mb-16">
+      <div className="z-10 flex flex-col flex-1 mb-2 md:mb-16">
         <Component {...pageProps} />
       </div>
       <footer className="container self-center fo z-20 px-4 mb-4 w-full bg-transparent flex-row md:flex md:items-center md:justify-between md:p-6 text-sm text-gray-400">
@@ -25,7 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps<any>) {
             target="_blank"
             href="https://nextjs.org"
           >
-            Next.js
+            Next.js (v{process.env.NEXT_PUBLIC_NEXT_VERSION})
           </a>{" "}
           on{" "}
           <a
@@ -54,6 +52,8 @@ export default function MyApp({ Component, pageProps }: AppProps<any>) {
           )}
         </div>
       </footer>
+      <Card isHome={pageProps?.isHome ?? false} />
+
     </div>
   );
 }

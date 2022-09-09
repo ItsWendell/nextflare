@@ -26,7 +26,7 @@ export const middleware: NextMiddleware = async (request, event) => {
   const country = geo?.country || "US";
   const city = geo?.city || "San Francisco";
   const region = geo?.region || "CA";
-  const ipAddress = ip || "";
+  const ipAddress = ip ?? "127.0.0.1";
 
   url.searchParams.set("country", country);
   url.searchParams.set("city", city);
