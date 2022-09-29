@@ -72,10 +72,6 @@ export default function HomePage({
   );
 }
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export const getServerSideProps: GetServerSideProps<PageProps> = async (
   ctx
 ) => {

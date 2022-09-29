@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import React from "react";
 
 export const Header = () => {
   return (
@@ -55,7 +55,6 @@ export const Header = () => {
  * A new version of the Header component which is fully responsive and works with the useRouter hook and works for desktop and mobile devices.
  */
 export const HeaderResponsive = () => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="z-20 w-full flex bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded">
       <div className="container px-4 flex flex-wrap justify-between items-center mx-auto md:flex-column">
@@ -117,6 +116,15 @@ export const HeaderResponsive = () => {
                 passHref
               >
                 <a className="block py-2 pr-4 md:pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Incremental</a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/api/info"
+                className="block py-2 pr-4 md:pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                passHref
+              >
+                <a className="block py-2 pr-4 md:pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Api</a>
               </Link>
             </li>
           </ul>

@@ -20,7 +20,6 @@ export default class NextflareWebpackPlugin {
                 ".js"
               );
             }
-            console.log("loaderName", loaderName);
             if (loaderName === "next-edge-ssr-loader") {
               console.log(
                 "Replacing next-edge-ssr-loader with nextflare-loader v2"

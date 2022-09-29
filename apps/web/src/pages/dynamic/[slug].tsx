@@ -16,15 +16,10 @@ export const DynamicPage = (props: any) => {
           <pre>
             <code>{JSON.stringify(router.query, null, 4)}</code>
           </pre>
-          <figcaption>Stringified JSON of the Next.js router</figcaption>
         </figure>
       </div>
     </div>
   );
-};
-
-export const config = {
-  runtime: "experimental-edge",
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {

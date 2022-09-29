@@ -65,18 +65,24 @@ export default async function edgeSSRLoader(this: any) {
 
   console.log("loading custom edge ssr loader", pageModPath);
   const transformed = `
-    ${
-      isAppDir
-        ? `
-      const pageMod = require(${JSON.stringify(pageModPath)})
-    `
-        : `
-      const pageMod = require(${stringifiedPagePath})
-    `
-    }
+
+  ${
+    isAppDir
+      ? `
+    const appRenderToHTML = require('next/dist/server/app-render').renderToHTMLOrFlight
+    const pagesRenderToHTML = null
+    const pageMod = require(${JSON.stringify(pageModPath)})
+  `
+      : `
+    const appRenderToHTML = null
+    const pagesRenderToHTML = require('next/dist/server/render').renderToHTML
+    const pageMod = require(${stringifiedPagePath})
+  `
+  }
     
     export const ComponentMod = pageMod;
     export const isAppDir = ${isAppDir};
+    export const renderReqToHTML = ${isAppDir ? 'appRenderToHTML' : 'pagesRenderToHTML'};
     `;
 
   return transformed;

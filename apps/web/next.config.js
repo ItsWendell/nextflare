@@ -1,9 +1,8 @@
+// @ts-expect-error idk why
 const withTM = require("next-transpile-modules")(["ui"]);
 const path = require("path");
 const fs = require("fs");
 const NextflareWebpackPlugin = require("nextflare/dist/webpack").default;
-
-console.log("NextflareWebpackPlugin", NextflareWebpackPlugin)
 
 // Fix serialisation of BigInts
 BigInt.prototype.toJSON = function() { return this.toString() }
@@ -16,6 +15,7 @@ console.log("version", version);
 const baseConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  serverComponents: true,
   env: {
     // Expose Next.js version in the browser.
     NEXT_PUBLIC_NEXT_VERSION: version,
@@ -25,6 +25,7 @@ const baseConfig = {
   },
   experimental: {
     runtime: "experimental-edge",
+
   },
   async redirects() {
     return [
@@ -42,11 +43,11 @@ const baseConfig = {
     if (context.isServer && context.nextRuntime === "edge" && !context.dev) {
       config.optimization.splitChunks.minSize = 0;
       config.optimization.splitChunks.minChunks = 1;
-      config.plugins.push(new NextflareWebpackPlugin());
+      // config.plugins.push(new NextflareWebpackPlugin());
       //console.log("[next.config.js] Edge context", JSON.stringify(context, null, 2));
       // console.log("[next.config.js] Edge config", JSON.stringify(config, null, 2));
     }
-    
+        
     return config;
   }
 }

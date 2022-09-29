@@ -11,18 +11,19 @@
     "lint": "next lint",
     "pages:build": "nextflare build",
     "pages:deploy": "pnpm wrangler pages publish ./dist --project-name=nextflare-demo",
-    "pages:dev": "pnpm wrangler pages dev ./dist"
+    "pages:dev": "pnpm wrangler pages dev ./dist --compatibility-date=2022-08-04 --compatibility-flag=streams_enable_constructors"
   },
   "dependencies": {
     "@cfpreview/vercel-to-pages": "^0.0.1",
     "@vercel/next": "^3.1.22",
-    "next": "file:../../../next.js/packages/next",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "next": "12.3.2-canary.15",
+    "react": "18.3.0-next-20a257c25-20220929",
+    "react-dom": "18.3.0-next-20a257c25-20220929",
     "ui": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
+    "@next/swc-linux-x64-gnu": "^11.1.2",
     "@tailwindcss/typography": "^0.5.4",
     "@types/node": "^18.7.6",
     "@types/react": "18.0.17",
@@ -39,6 +40,6 @@
     "vercel": "^28.1.0",
     "webpack": "5",
     "webpack-deduplication-plugin": "^0.0.8",
-    "wrangler": "0.0.0-13798979"
+    "wrangler": "0.0.0-f29fead3"
   }
 }

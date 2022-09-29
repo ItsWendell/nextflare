@@ -44,7 +44,6 @@ const build = async () => {
         } : undefined,
         platform: 'node',
         outdir: './dist',
-        external: ['./node_modules/*', './nextflare-loader'],
         loader: {
             '.template.ts': 'text',
         },

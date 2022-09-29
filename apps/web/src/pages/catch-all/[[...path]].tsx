@@ -17,10 +17,6 @@ export const DynamicPage = (props: any) => {
   );
 };
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {

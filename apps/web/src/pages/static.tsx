@@ -7,7 +7,7 @@ export const StaticPage = (props: any) => {
         <div className="prose dark:prose-invert max-w-none">
           <h1>Static Pages</h1>
           {/** Subtitle */}
-            <p className="text-gray-600">This page is static and uploaded as .html to Cloudflare Pages.</p>
+            <p className="text-gray-600">This page <i>should</i> be static and uploaded as a .html to Cloudflare Pages, but static generation during build was recently disabled and not working properly for edge runtime, this is now an SSR page.</p>
           <pre>
             <code>{JSON.stringify(props, null, 4)}</code>
           </pre>
