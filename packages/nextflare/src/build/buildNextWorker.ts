@@ -78,6 +78,7 @@ export const buildNextWorker = async (options?: VercelBuildPagesOptions) => {
       process: "globalThis.process",
       self: "globalThis",
       "process.env.NODE_ENV": JSON.stringify("production"),
+      "process.env.NEXT_RUNTIME": JSON.stringify(env.NEXT_RUNTIME),
     },
     platform: "neutral",
     minify: false,

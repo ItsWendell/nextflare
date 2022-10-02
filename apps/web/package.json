@@ -16,7 +16,7 @@
   "dependencies": {
     "@cfpreview/vercel-to-pages": "^0.0.1",
     "@vercel/next": "^3.1.22",
-    "next": "12.3.2-canary.15",
+    "next": "12.3.2-canary.16",
     "react": "18.3.0-next-20a257c25-20220929",
     "react-dom": "18.3.0-next-20a257c25-20220929",
     "ui": "workspace:*"

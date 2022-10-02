@@ -44,6 +44,7 @@ const build = async () => {
         } : undefined,
         platform: 'node',
         outdir: './dist',
+        external: ["webpack"],
         loader: {
             '.template.ts': 'text',
         },

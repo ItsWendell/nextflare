@@ -1,77 +1,59 @@
-# Turborepo starter with pnpm
+# Nextflare - Run Next.js Edge Runtime on Cloudflare Pages (Workers)
 
-This is an official starter turborepo.
+**NOTE:** *We're still actively updating this repository, docs, and preparing a potential release on NPM, this package is highly experimental and might break at any time, and we might even introduce a rename soon.*
 
-## What's inside?
+This (experimental) tool allows you to run Next.js with Edge Runtime on Cloudflare Pages! 
 
-This turborepo uses [pnpm](https://pnpm.io) as a packages manager. It includes the following packages/apps:
+## Current approach
 
-### Apps and Packages
+Currently, Next.js outputs by default an individual Edge Function for each Page or API Route, including a full `NextWebServer` for each function. This is not ideal since that requires us to write a custom router, since for Cloudflare Workers / Pages, we can only upload one worker (or multiple functions but those get bundled anyways).
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+So, for now we're using esbuild and the `middleware-manifest.json` outputted by `next build` to bundle those functions together, and output a `_worker.js` file based on the `worker.template.ts` file, compatible for Cloudflare Pages with a custom router that forwards requests to the right functions.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+We put all truely static files in the `_routes.json` file so we can skip executing this worker.
 
-### Utilities
+## Possible future approach
 
-This turborepo has some additional tools already setup for you:
+I'm experimenting with hooking into the webpack configuration of Next.js to be able to include a custom entrypoint for a custom `CloudflareWebServer` based on `BaseServer` optimized for Cloudflare Pages. This would allow us to build a LOT more features like incremental static generation and have overall greater feature parity.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Supported Features
+ - [Edge Server-Side Rending](https://nextjs.org/docs/basic-features/pages#server-side-rendering) 
+ - [Dynamic Routes](https://nextjs.org/docs/routing/dynamic-routes) - 
+ - [Edge API Routes](https://nextjs.org/docs/api-routes/edge-api-routes)
+ - [Edge Middleware](https://nextjs.org/docs/advanced-features/middleware)
+ - [Geo Information](https://nextjs.org/docs/api-reference/next/server#nextrequest)
+   - Using Cloudflare's [IncomingRequestCfProperties](https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties) for this.
+ - [next/image](https://nextjs.org/docs/api-reference/next/image) - Image component with static imports and src paths.
 
-## Setup
+## Unsupported Features
+ - [Static Generation](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
+    - Next.js doesn't support this yet for the Edge Runtime, will be outputted as a SSR page.
+ - [Image Optimization](https://nextjs.org/docs/basic-features/image-optimization)
+    - Possible with custom image loaders, the built-in loader is currently just a simple passthrough to the static image.
+ - [Incremental Static Generation](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration)
+   - This might be possible in the future using a custom Cloudflare KV store for example, but will require us to use the possible future approach.
+ - [App Dir / Layouts RFC](https://nextjs.org/blog/layouts-rfc)
+   - In the current state it changes the build output in ways that are not optimal, e.g. edge chunking is lost, would be able to support at a later stage.
 
-This repository is used in the `npx create-turbo@latest` command, and selected when choosing which package manager you wish to use with your monorepo (pnpm).
+### Interesting resources and points within the Next.js codebase:
+ - [packages/next/server/web-server.ts](https://github.com/vercel/next.js/blob/canary/packages/next/server/web-server.ts)
+   - The `NextWebServer` used for each edge runtime page / api route.
+ - [packages/next/server/base-server.ts](https://github.com/vercel/next.js/blob/canary/packages/next/server/base-server.ts)
+   - The `BaseServer` used by `NextServer` and `NextWebServer` that I'm attempting to extend to build a better version for Cloudflare Pages.
+ - [packages/next/build/webpack/loaders/next-edge-function-loader.ts](https://github.com/vercel/next.js/blob/canary/packages/next/build/webpack/loaders/next-edge-function-loader.ts)
+   - Webpack loader used to create edge functions
+ - [packages/next/build/webpack/loaders/next-middleware-loader.ts](https://github.com/vercel/next.js/blob/canary/packages/next/build/webpack/loaders/next-middleware-loader.ts)
+   - Webpack loader used to create middleware functions
+ - [packages/next/build/webpack/loaders/next-edge-ssr-loader/index.ts](https://github.com/vercel/next.js/blob/canary/packages/next/build/webpack/loaders/next-edge-ssr-loader/index.ts)
+   - Webpack loader used to create the edge ssr functions
 
-### Build
 
-To build all apps and packages, run the following command:
+## How to get started.
 
-```
-cd my-turborepo
-pnpm run build
-```
+We haven't bundled this into NPM yet, so cloning this repository will be needed, you'd need to use [PNPM](https://pnpm.io/). You'd need to make sure your project is using Edge Runtime.
 
-### Develop
+1. Use the [Global Runtime Option](https://nextjs.org/docs/advanced-features/react-18/switchable-runtime#global-runtime-option) to make sure your project is using Next.js Edge Runtime and works fully with that runtime in `next dev`.
+2. Once verified everything works as you expect, run `next build` to generate a build.
+3. Next run `nextflare build` in the root of your next.js project, where your package.json / next.config.js file is located.
+4. An folder called `dist` will be generated, this folder you can directly upload to Cloudflare Pages.
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-pnpx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-pnpx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)

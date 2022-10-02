@@ -1,11 +1,20 @@
-import { Compiler } from "webpack";
+import { Compiler, Dependency, sources, WebpackError } from "webpack";
 import path from "path";
 
 console.log("Hello from Nextflare");
 
+const RawSource = sources.RawSource;
+
 export default class NextflareWebpackPlugin {
   // Define `apply` as its prototype method which is supplied with compiler as its argument
   apply(compiler: Compiler) {
+
+    // Add a entrypoint for a specific file to webpack config and a loader for it
+    compiler.hooks.entryOption.tap("NextflareWebpackPlugin", (context, entry) => {
+      console.log("entryOption", context, entry);
+      return entry;
+    });
+
     // Replace next-edge-ssr-loader with a custom loader
     compiler.hooks.compilation.tap("NextflareWebpackPlugin", (compilation) => {
       compilation.hooks.normalModuleLoader.tap(
