@@ -57,3 +57,22 @@ We haven't bundled this into NPM yet, so cloning this repository will be needed,
 3. Next run `nextflare build` in the root of your next.js project, where your package.json / next.config.js file is located.
 4. An folder called `dist` will be generated, this folder you can directly upload to Cloudflare Pages.
 
+### Configuration on Cloudflare. 
+
+In order for SSR to work, you'd need to enable some compatibility flags on Cloudflare Pages, this is currently only possible using the API, this curl call will set the compatibility date to `2022-08-16` and add the following flags to your Cloudflare Pages project:
+
+ - transformstream_enable_standard_constructor
+ - streams_enable_constructors
+
+```sh
+
+curl https://api.cloudflare.com/client/v4/accounts/ACCOUNT_ID/pages/projects/PROJECT_SLUG -H 'X-Auth-Email: YOUR_EMAIL' -H 'X-Auth-Key: YOUR_AUTH_KEY' -X PATCH -d '{"deployment_configs":{"production":{"compatibility_date": "2022-08-16", "compatibility_flags": ["transformstream_enable_standard_constructor","streams_enable_constructors"]},"preview":{"compatibility_date": "2022-08-16", "compatibility_flags": ["transformstream_enable_standard_constructor","streams_enable_constructors"]}}}'
+
+```
+
+ - Replace ACCOUNT_ID with your Cloudflare Account ID.
+ - Replace PROJECT_SLUG with your project slug on cloudflare for cloudflare pages
+ - Replace YOUR_EMAIL with your email address
+ - Replace YOUR_AUTH_KEY with your auth key
+
+
